@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_bg"
+    android:gravity="center"
+    android:padding="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Voice Journal"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/micButton"
+        android:src="@android:drawable/ic_btn_speak_now"
+        android:contentDescription="Mic icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/transcribedText"
+        android:hint="Your transcribed text will appear here"
+        android:background="@drawable/rounded_card"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:inputType="textMultiLine"
+        android:autoSizeTextType="none"
+        android:textColor="@color/text_light"
+        android:textColorHint="@color/hint_color"/>
+</LinearLayout>

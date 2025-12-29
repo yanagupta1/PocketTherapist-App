@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/dark_surface">
+
+    <!-- Header with sparkle icon -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:text="✨"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entry Saved"
+            android:textColor="@color/accent_purple"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_semibold" />
+
+    </LinearLayout>
+
+    <!-- AI Response -->
+    <TextView
+        android:id="@+id/txtCompanionResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Loading..."
+        android:textColor="@color/text_light"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_regular"
+        android:lineSpacingMultiplier="1.4"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Loading indicator -->
+    <ProgressBar
+        android:id="@+id/progressCompanion"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/accent_purple"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/hint_color"
+        android:alpha="0.3"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Recommendations prompt -->
+    <TextView
+        android:id="@+id/txtRecommendationsPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We have personalized recommendations based on how you're feeling."
+        android:textColor="@color/hint_color"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_regular"
+        android:lineSpacingMultiplier="1.3"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone" />
+
+    <!-- View Recommendations Button -->
+    <Button
+        android:id="@+id/btnViewRecommendations"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="View Recommendations"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_medium"
+        android:backgroundTint="@color/accent_purple"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone" />
+
+    <!-- Dismiss Button -->
+    <Button
+        android:id="@+id/btnDismissCompanion"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="Done"
+        android:textColor="@color/hint_color"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_regular"
+        android:backgroundTint="@color/dark_card" />
+
+</LinearLayout>

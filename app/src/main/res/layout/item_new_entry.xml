@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/newEntryContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/rounded_card"
+    android:minHeight="120dp"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etNewEntry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:background="@android:color/transparent"
+        android:gravity="top|start"
+        android:hint="What's on your mind?"
+        android:inputType="textMultiLine"
+        android:textColor="@color/text_light"
+        android:textColorHint="@color/hint_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/micButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <ImageView
+        android:id="@+id/micButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Hold to speak"
+        android:padding="8dp"
+        android:src="@drawable/ic_mic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNewEntry"
+        app:tint="@color/accent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

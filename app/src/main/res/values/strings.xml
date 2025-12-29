@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">PocketTherapist</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+
+    <string name="create_account">Create Account</string>
+
+    <string name="dont_have_account">Do not have an account? Sign up</string>
+    <string name="already_have_account">Already have an account? Sign in</string>
+
+    <string name="welcome_title">Welcome, how are we feeling today?</string>
+
+    <string name="journal">Journal</string>
+    <string name="journal_desc">Write or record your thoughts</string>
+
+    <string name="activities">Activities</string>
+    <string name="activities_desc">Find wellness events around you</string>
+
+    <string name="recommendations">Recommendations</string>
+    <string name="recommendations_desc">Personalized mental wellness tips</string>
+
+    <string name="profile">Profile</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_age">Age</string>
+    <string name="hint_gender">Gender</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="display_name">Display Name</string>
+    <string name="bio">Bio</string>
+    <string name="birthdate">Birthdate</string>
+    <string name="location">Location</string>
+    <string name="interests">Interests</string>
+    <string name="personal_info">Personal Info</string>
+    <string name="about_me">About Me</string>
+    <string name="edit_profile">Edit Profile</string>
+
+    <!-- Activities -->
+    <string name="daily_step_goal">Daily Step Goal</string>
+    <string name="edit_goal">Edit goal</string>
+    <string name="set_step_goal">Set Step Goal</string>
+    <string name="enter_step_goal">Enter your daily step goal</string>
+    <string name="events_near_you">Events Near You</string>
+    <string name="no_events_found">No events found nearby</string>
+    <string name="wellness_places">Wellness Places</string>
+    <string name="loading_places">Finding wellness places…</string>
+    <string name="no_places_found">No wellness places found nearby</string>
+
+    <!-- Recommendations -->
+    <string name="wellness_tip">Wellness Tip</string>
+    <string name="music_for_you">Music for You</string>
+    <string name="loading">Loading…</string>
+    <string name="loading_songs">Finding songs for you…</string>
+    <string name="no_journal_for_recommendations">Write a journal entry to get personalized recommendations</string>
+    <string name="no_recommendations">Unable to load recommendations</string>
+
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>

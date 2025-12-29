@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg_red">
+
+    <!-- Header with Edit Button -->
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile"
+                style="@style/TextAppearance.App.FragmentTitle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Manage your account settings"
+                style="@style/TextAppearance.App.FragmentSubtitle" />
+        </LinearLayout>
+
+        <!-- Edit/Cancel Toggle Button -->
+        <ImageButton
+            android:id="@+id/btnEditToggle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_edit"
+            android:contentDescription="Edit profile"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
+
+            <!-- Profile Picture Section -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:padding="4dp">
+
+                <!-- Circular Profile Image -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile_placeholder"
+                    app:shapeAppearanceOverlay="@style/CircularImageStyle"
+                    app:strokeColor="@color/accent_red"
+                    app:strokeWidth="3dp" />
+
+                <!-- Camera Overlay (visible in edit mode) -->
+                <FrameLayout
+                    android:id="@+id/cameraOverlay"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/circular_overlay_dim"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_camera"
+                        app:tint="@android:color/white" />
+                </FrameLayout>
+            </FrameLayout>
+
+            <!-- Display Name (prominent) -->
+            <TextView
+                android:id="@+id/txtDisplayName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="Display Name"
+                style="@style/TextAppearance.App.DisplayName" />
+
+            <!-- Username (smaller, read-only) -->
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:text="@username"
+                android:textSize="14sp"
+                android:textColor="@color/text_light" />
+
+            <!-- Section: Personal Info -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="12dp"
+                android:text="Personal Info"
+                style="@style/TextAppearance.App.SectionHeader"
+                android:textColor="@color/accent_red" />
+
+            <!-- Display Name Input (edit mode) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDisplayName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Display Name"
+                style="@style/ProfileInputStyle"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editDisplayName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/text_light" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Age Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/hint_age"
+                style="@style/ProfileInputStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:enabled="false"
+                    android:textColor="@color/text_light" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Birthdate Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBirthdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Birthdate"
+                style="@style/ProfileInputStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editBirthdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:enabled="false"
+                    android:textColor="@color/text_light" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Gender Dropdown -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/hint_gender"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/dropdownGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:enabled="false"
+                    android:textColor="@color/text_light" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Location Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Location"
+                style="@style/ProfileInputStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:enabled="false"
+                    android:textColor="@color/text_light" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Section: About Me -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:text="About Me"
+                style="@style/TextAppearance.App.SectionHeader"
+                android:textColor="@color/accent_red" />
+
+            <!-- Bio Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tell us about yourself"
+                style="@style/ProfileInputStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:maxLines="5"
+                    android:gravity="top"
+                    android:enabled="false"
+                    android:textColor="@color/text_light" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Interests Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilInterests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Interests &amp; Hobbies"
+                style="@style/ProfileInputStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editInterests"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:textColor="@color/text_light" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Save Button (only visible in edit mode) -->
+            <Button
+                android:id="@+id/btnSaveProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/accent_red"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+
+            <!-- Cancel Button (only visible in edit mode) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancelEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_marginTop="8dp"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                app:strokeColor="@color/accent_red"
+                android:textColor="@color/accent_red"
+                android:visibility="gone" />
+
+            <!-- Section: Settings -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="12dp"
+                android:text="Settings"
+                style="@style/TextAppearance.App.SectionHeader"
+                android:textColor="@color/accent_red" />
+
+            <!-- AI Features Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/dark_card"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AI Features"
+                                android:textColor="@color/text_light"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="Personalized recommendations powered by AI"
+                                android:textColor="@color/hint_color"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchAIFeatures"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:thumbTint="@color/accent_red"
+                            app:trackTint="@color/hint_color" />
+
+                    </LinearLayout>
+
+                    <!-- AI Status Text -->
+                    <TextView
+                        android:id="@+id/txtAIStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="AI features are enabled. Your journal entries are analyzed to provide personalized wellness tips and music recommendations."
+                        android:textColor="@color/hint_color"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="11sp"
+                        android:lineSpacingMultiplier="1.3" />
+
+                    <!-- View Privacy Info Button -->
+                    <TextView
+                        android:id="@+id/btnViewAIPrivacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="View Data &amp; Privacy Info"
+                        android:textColor="@color/accent_red"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:padding="4dp"
+                        android:background="?attr/selectableItemBackground" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Logout Button -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log Out"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/dark_gray"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

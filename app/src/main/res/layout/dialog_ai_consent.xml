@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header with Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="🤖"
+                android:textSize="28sp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="AI-Powered Features"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!-- Introduction -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PocketTherapist uses artificial intelligence to provide you with personalized wellness recommendations. Before we enable these features, we want to be transparent about how your data is used."
+            android:textColor="@color/text_light"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="14sp"
+            android:lineSpacingMultiplier="1.4"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/hint_color"
+            android:alpha="0.3"
+            android:layout_marginBottom="20dp" />
+
+        <!-- What Data Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📋 What Data Is Shared"
+            android:textColor="@color/accent_orange"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="When you use AI features, the following information may be sent to our AI service:"
+            android:textColor="@color/hint_color"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.3"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Your journal entry text"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Your selected mood emoji"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Detected emotional tone (analyzed locally on your device)"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- How It's Used Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎯 How Your Data Is Used"
+            android:textColor="@color/accent_blue"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your data is used exclusively to:"
+            android:textColor="@color/hint_color"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.3"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Generate personalized wellness tips and breathing exercises"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Recommend music that matches your current emotional state"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Provide empathetic responses after you save a journal entry"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Detect crisis language to show you helpful resources"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- AI Provider Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔧 AI Service Provider"
+            android:textColor="@color/accent_purple"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We use Google's Gemini AI to process your journal entries and generate recommendations. Google's AI services are subject to Google's Privacy Policy and Terms of Service. Your data is processed in accordance with their data handling practices."
+            android:textColor="@color/text_light"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.3"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Privacy Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔒 Your Privacy Matters"
+            android:textColor="@color/accent_green"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Your journal entries are never stored on external servers permanently"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Data is sent only when you actively use AI features"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• You can disable AI features at any time in Settings"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Your personal identity is never shared with the AI"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• All emotion analysis happens locally on your device first"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- What Happens If You Decline -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="❌ If You Choose Not To Enable AI"
+            android:textColor="@color/accent_red"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="That's completely okay! You can still use PocketTherapist to journal and track your moods. The following features will be unavailable:"
+            android:textColor="@color/text_light"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.3"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Personalized wellness recommendations"
+                android:textColor="@color/hint_color"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• AI-curated music suggestions"
+                android:textColor="@color/hint_color"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Empathetic AI companion responses"
+                android:textColor="@color/hint_color"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/hint_color"
+            android:alpha="0.3"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Change Later Note -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💡 You can change this setting anytime from your Profile → Settings → AI Features"
+            android:textColor="@color/hint_color"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="12sp"
+            android:fontStyle="italic"
+            android:lineSpacingMultiplier="1.3"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnEnableAI"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Enable AI Features"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/accent_blue"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="15sp"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnDeclineAI"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="No Thanks, Maybe Later"
+            android:textColor="@color/hint_color"
+            android:backgroundTint="@android:color/transparent"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</ScrollView>

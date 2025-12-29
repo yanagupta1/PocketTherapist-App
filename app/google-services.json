@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "980005010298",
+    "firebase_url": "https://pockettherapist-d684f-default-rtdb.firebaseio.com",
+    "project_id": "pockettherapist-d684f",
+    "storage_bucket": "pockettherapist-d684f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980005010298:android:aeec5a2cc4458d4b3eb4c3",
+        "android_client_info": {
+          "package_name": "com.example.pockettherapist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLPPyyqc088EnnUJsgQJzzZ39wW2BfOHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

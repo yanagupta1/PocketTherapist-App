@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="#1A1A1A"
+    app:strokeWidth="0dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- Type Badge -->
+        <TextView
+            android:id="@+id/amenityType"
+            android:text="Mental Health"
+            android:textSize="11sp"
+            android:textColor="@color/accent_purple"
+            android:textStyle="bold"
+            android:background="@drawable/category_badge_background"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Amenity Name -->
+        <TextView
+            android:id="@+id/amenityName"
+            android:text="Amenity Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_light"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/amenityDescription"
+            android:text="Description here"
+            android:textSize="14sp"
+            android:textColor="@color/hint_color"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.2"/>
+
+        <!-- Phone (if available) -->
+        <LinearLayout
+            android:id="@+id/phoneLayout"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_phone"
+                android:contentDescription="Phone" />
+
+            <TextView
+                android:id="@+id/amenityPhone"
+                android:text="(555) 123-4567"
+                android:textSize="14sp"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!-- Address (if available) -->
+        <LinearLayout
+            android:id="@+id/addressLayout"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_location"
+                android:contentDescription="Location" />
+
+            <TextView
+                android:id="@+id/amenityAddress"
+                android:text="123 Main St, City"
+                android:textSize="14sp"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginStart="8dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+        <!-- Tap to Open hint -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_open_in_new"
+                android:contentDescription="Open" />
+
+            <TextView
+                android:text="Tap to view on map"
+                android:textSize="12sp"
+                android:textColor="@color/hint_color"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginStart="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:src="@drawable/ic_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="4dp" />
+
+    <EditText
+        android:id="@+id/etVoiceText"
+        android:hint="Speak your thoughts…"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_card"
+        android:textColor="@color/text_light"
+        android:textColorHint="@color/hint_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="12dp">
+    <Button
+        android:id="@+id/btnClear"
+        android:text="Clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp" />
+
+    <Button
+        android:id="@+id/btnAnalyze"
+        android:text="Analyze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/micButton"
+        android:src="@drawable/ic_mic"
+        android:layout_marginTop="24dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+</LinearLayout>

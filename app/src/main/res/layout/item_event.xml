@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="#1A1A1A"
+    app:strokeWidth="0dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Category Badge -->
+        <TextView
+            android:id="@+id/eventCategory"
+            android:text="Wellness"
+            android:textSize="10sp"
+            android:textColor="@color/accent_purple"
+            android:textStyle="bold"
+            android:background="@drawable/category_badge_background"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Event Title -->
+        <TextView
+            android:id="@+id/eventTitle"
+            android:text="Sample Event"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_light"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/eventDescription"
+            android:text="Event description here"
+            android:textSize="13sp"
+            android:textColor="@color/hint_color"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.1"/>
+
+        <!-- Date & Time Row -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_calendar"
+                android:contentDescription="Date" />
+
+            <TextView
+                android:id="@+id/eventDate"
+                android:text="Dec 15, 2025"
+                android:textSize="13sp"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginStart="6dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/timeIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_time"
+                android:contentDescription="Time"
+                android:layout_marginStart="8dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/eventTime"
+                android:text="6:00 PM"
+                android:textSize="13sp"
+                android:textColor="@color/text_light"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginStart="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <!-- Venue Row -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_location"
+                android:contentDescription="Location" />
+
+            <TextView
+                android:id="@+id/eventVenue"
+                android:text="Community Center"
+                android:textSize="13sp"
+                android:textColor="@color/hint_color"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginStart="6dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+        <!-- Address (optional) -->
+        <TextView
+            android:id="@+id/eventAddress"
+            android:text="123 Main St, City"
+            android:textSize="12sp"
+            android:textColor="@color/hint_color"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

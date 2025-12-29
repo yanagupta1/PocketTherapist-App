@@ -1,0 +1,115 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PocketTherapist" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">#0D0D0D</item>
+        <item name="android:navigationBarColor">#0D0D0D</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+    </style>
+
+    <style name="Theme.PocketTherapist" parent="Base.Theme.PocketTherapist" />
+
+    <!-- Base Text Appearance for App -->
+    <style name="TextAppearance.App" parent="TextAppearance.Material3.BodyLarge" />
+
+    <!-- Fragment Title Style - Bold, impactful -->
+    <style name="TextAppearance.App.FragmentTitle">
+        <item name="fontFamily">@font/queensides_medium</item>
+        <item name="android:fontFamily">@font/queensides_medium</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <!-- Fragment Subtitle Style -->
+    <style name="TextAppearance.App.FragmentSubtitle">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_light</item>
+    </style>
+
+    <!-- Section Header Style -->
+    <style name="TextAppearance.App.SectionHeader">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Journal Entry Title Style -->
+    <style name="TextAppearance.App.JournalTitle">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_light</item>
+    </style>
+
+    <!-- Journal Entry Body Style -->
+    <style name="TextAppearance.App.JournalBody">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_light</item>
+    </style>
+
+    <!-- Display Name Style (Profile) -->
+    <style name="TextAppearance.App.DisplayName">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Circular Image Style for Profile Picture -->
+    <style name="CircularImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Profile Input Field Style -->
+    <style name="ProfileInputStyle" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/dark_card</item>
+        <item name="boxStrokeColor">@color/profile_input_stroke</item>
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="hintTextColor">@color/accent_red</item>
+        <item name="android:textColorHint">@color/text_light</item>
+        <item name="helperTextTextColor">@color/text_light</item>
+    </style>
+
+    <!-- Login/Signup Input Field Style (Green) -->
+    <style name="LoginInputStyle" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/dark_card</item>
+        <item name="boxStrokeColor">@color/login_input_stroke</item>
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="hintTextColor">@color/accent_green</item>
+        <item name="android:textColorHint">@color/text_light</item>
+        <item name="helperTextTextColor">@color/text_light</item>
+    </style>
+
+    <!-- Login/Signup Dropdown Style (Green) -->
+    <style name="LoginDropdownStyle" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxBackgroundColor">@color/dark_card</item>
+        <item name="boxStrokeColor">@color/login_input_stroke</item>
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="hintTextColor">@color/accent_green</item>
+        <item name="android:textColorHint">@color/text_light</item>
+    </style>
+
+    <!-- Crisis Alert Dialog Style -->
+    <style name="Theme.PocketTherapist.AlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="android:background">@color/dark_surface</item>
+        <item name="android:windowBackground">@color/dark_surface</item>
+    </style>
+</resources>
